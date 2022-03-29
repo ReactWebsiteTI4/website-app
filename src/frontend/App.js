@@ -11,9 +11,7 @@ export default class App extends React.Component {
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            TEST TEST TEST TEST TEST
-          </p>
+          <p>TEST - Work in Progress</p>
           <label for="input_name">Entrer votre nom : </label><input id="input_name"type="text"/>
           <button onClick={() => this.sayHello(document.getElementById('input_name').value)}>Envoyer</button>
         </header>
