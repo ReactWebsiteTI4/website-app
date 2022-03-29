@@ -18,14 +18,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Setup git user
+      - name: npm install
+        run: npm install
+      
+      - name: Deploy
         run: |
-            git config --global user.name "Solal-G"
-            git config --global user.email "goldstein.solal@gmail.com"
-            git config --list
-      - uses: actions/setup-node@v2
-        with:
-          node-version: '14'
-      - run: |
-          npm install
+          git config --global user.name 'Solal-G'
+          git config --global user.email 'goldstein.solal@gmail.com'
+          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
           npm run deploy
