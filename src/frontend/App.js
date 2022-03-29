@@ -12,7 +12,7 @@ export default class App extends React.Component {
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <p>
-            TEST TEST TEST TEST
+            TEST TEST TEST TEST TEST
           </p>
           <label for="input_name">Entrer votre nom : </label><input id="input_name"type="text"/>
           <button onClick={() => this.sayHello(document.getElementById('input_name').value)}>Envoyer</button>
