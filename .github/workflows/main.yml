@@ -21,5 +21,7 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: '14'
+      - run: git config user.name github-actions
+      - run: git config user.email github-actions@github.com
       - run: npm install
       - run: npm run deploy
