@@ -17,5 +17,9 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: deploy on githubpages
-        run: 'npm run deploy'
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+      - run: npm install
+      - run: npm run deploy
