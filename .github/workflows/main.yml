@@ -24,6 +24,6 @@ jobs:
       - run : echo ${{secrets.NAME_GIT}}
       - run : echo ${{secrets.EMAIL_GIT}}
       - run: npm install
-      - run: git config --global user.email ${{secrets.EMAIL_GIT}}
-      - run: git config --global user.name ${{secrets.NAME_GIT}}
+      - run: git config --global user.email "goldstein.solal@gmail.com"
+      - run: git config --global user.name "Solal-G"
       - run: npm run deploy
